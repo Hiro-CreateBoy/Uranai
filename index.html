@@ -29,7 +29,12 @@ document.write(Y+"年"+M+"月"+D+"日");
 <hr>
 <h3>占いの結果</h3>
 
+<input id="button" type="button" value="占う">
+  
 <script type="text/javascript">
+  
+document.getElementById("button").onclick=function(){  
+  
 Z=Math.floor(Math.random()*4)+1;
 if(Z==1){
 document.write("<span style=\"font-size: xx-large;color:red;\">大吉<\/span>ラッキーアイテムは、長袖。ぬくぬくになれるよ。<br>");
@@ -51,6 +56,7 @@ document.write("<span style=\"font-size: xx-large;color:purple;\">大凶<\/span>
 document.write("<img src=\"https://2.bp.blogspot.com/-h61ngruj0tE/T3K7RDUWmPI/AAAAAAAAE-0/KXtPY8fDwco/s1600/omikuji_daikyou.png\" width=\"200\">");
 
 }
+}   
 </script>
 
 </body>
