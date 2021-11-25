@@ -46,9 +46,11 @@ document.write(Y+"年"+M+"月"+D+"日");
  var objS=document.createElement('p');
  objS.innerHTML= '<span style=\"font-size: xx-large;color:purple;\">大凶<\/span>ラッキーアイテムは靴。外に出ても足が痛くない。<br><img src=\"https://2.bp.blogspot.com/-h61ngruj0tE/T3K7RDUWmPI/AAAAAAAAE-0/KXtPY8fDwco/s1600/omikuji_daikyou.png\" width=\"200\">'; 
 
-  
+var one=1;  //一回しか占えないように
 document.getElementById("button").onclick=function(){  
-  
+
+if(one==1){  //一回だけ入る
+ one=one-2;//入れなくする
 Z=Math.floor(Math.random()*4)+1;
 if(Z==1){
 objA.appendChild(objP); /*divにpを子として挿入*/
@@ -66,6 +68,11 @@ else{
 objA.appendChild(objS); /*divにpを子として挿入*/
 
 }
+}
+  else{
+    //警告を出す
+    alert("今日は、これ以上占えません。");
+  }
 }   
 </script>
 
