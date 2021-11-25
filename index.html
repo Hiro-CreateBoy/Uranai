@@ -31,29 +31,39 @@ document.write(Y+"年"+M+"月"+D+"日");
 
 <input id="button" type="button" value="占う">
   
+<div id="a"></div>
+
 <script type="text/javascript">
+
+//新しく追加する
+ var objA=document.getElementById('a'); /*id名aのdivを取得*/
+ var objP=document.createElement('p'); /*p要素を生成*/
+ objP.innerHTML= '<span style=\"font-size: xx-large;color:red;\">大吉<\/span>ラッキーアイテムは、長袖。ぬくぬくになれるよ。<br><img src=\"https://3.bp.blogspot.com/-vQSPQf-ytsc/T3K7QM3qaQI/AAAAAAAAE-s/6SB2q7ltxwg/s1600/omikuji_daikichi.png\" width=\"200\">'; /*pの中身を追加*/
+ var objQ=document.createElement('p'); 
+ objQ.innerHTML= '<span style=\"font-size: xx-large;color:blue;\">吉<\/span>ラッキーアイテムは、炭水化物。食欲がわきますな。<br><img src=\"https://2.bp.blogspot.com/-27IG0CNV-ZE/VKYfn_1-ycI/AAAAAAAAqXw/fr6Y72lOP9s/s800/omikuji_kichi.png\" width=\"200\">'; 
+ var objR=document.createElement('p');
+ objR.innerHTML= '<span style=\"font-size: xx-large;color:yellow;\">凶<\/span>ラッキーアイテムはノートパソコン。宿題がはかどるー。<br><img src=\"https://4.bp.blogspot.com/-qCfF4H7YOvE/T3K7R5ZjQVI/AAAAAAAAE-4/Hd1u2tzMG3Q/s1600/omikuji_kyou.png\" width=\"200\">'; 
+ var objS=document.createElement('p');
+ objS.innerHTML= '<span style=\"font-size: xx-large;color:purple;\">大凶<\/span>ラッキーアイテムは靴。外に出ても足が痛くない。<br><img src=\"https://2.bp.blogspot.com/-h61ngruj0tE/T3K7RDUWmPI/AAAAAAAAE-0/KXtPY8fDwco/s1600/omikuji_daikyou.png\" width=\"200\">'; 
+
   
 document.getElementById("button").onclick=function(){  
   
 Z=Math.floor(Math.random()*4)+1;
 if(Z==1){
-document.write("<span style=\"font-size: xx-large;color:red;\">大吉<\/span>ラッキーアイテムは、長袖。ぬくぬくになれるよ。<br>");
-document.write("<img src=\"https://3.bp.blogspot.com/-vQSPQf-ytsc/T3K7QM3qaQI/AAAAAAAAE-s/6SB2q7ltxwg/s1600/omikuji_daikichi.png\" width=\"200\">");
+objA.appendChild(objP); /*divにpを子として挿入*/
 
 }
 else if(Z==2){
-document.write("<span style=\"font-size: xx-large;color:blue;\">吉<\/span>ラッキーアイテムは、炭水化物。食欲がわきますな。<br>");
-document.write("<img src=\"https://2.bp.blogspot.com/-27IG0CNV-ZE/VKYfn_1-ycI/AAAAAAAAqXw/fr6Y72lOP9s/s800/omikuji_kichi.png\" width=\"200\">");
+objA.appendChild(objQ); /*divにpを子として挿入*/
 
 }
 else if(Z==3){
-document.write("<span style=\"font-size: xx-large;color:yellow;\">凶<\/span>ラッキーアイテムはノートパソコン。宿題がはかどるー。<br>");
-document.write("<img src=\"https://4.bp.blogspot.com/-qCfF4H7YOvE/T3K7R5ZjQVI/AAAAAAAAE-4/Hd1u2tzMG3Q/s1600/omikuji_kyou.png\" width=\"200\">");
+objA.appendChild(objR); /*divにpを子として挿入*/
 
 }
 else{
-document.write("<span style=\"font-size: xx-large;color:purple;\">大凶<\/span>ラッキーアイテムは靴。外に出ても足が痛くない。<br>");
-document.write("<img src=\"https://2.bp.blogspot.com/-h61ngruj0tE/T3K7RDUWmPI/AAAAAAAAE-0/KXtPY8fDwco/s1600/omikuji_daikyou.png\" width=\"200\">");
+objA.appendChild(objS); /*divにpを子として挿入*/
 
 }
 }   
